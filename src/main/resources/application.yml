@@ -1,0 +1,23 @@
+app:
+  api:
+    external:
+      url: https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos
+      api-key: DEMO_KEY
+    headers:
+      sol: sol
+      camera: camera
+      api-key: api_key
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://aws-pic-db.cfrrhg7oeu3i.eu-north-1.rds.amazonaws.com:5432/picdb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
