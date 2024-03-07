@@ -13,11 +13,11 @@ server:
 
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
     username: ec2_rds_postgres_user
     url: jdbc:postgresql://aws-rds-pic-db.cfrrhg7oeu3i.eu-north-1.rds.amazonaws.com:5432/picdb?ssl=true&sslmode=require
     hikari:
       max-lifetime: 840000
+      jdbc-url: jdbc:postgresql://aws-rds-pic-db.cfrrhg7oeu3i.eu-north-1.rds.amazonaws.com:5432/picdb?ssl=true&sslmode=require
   jpa:
     hibernate:
       ddl-auto: create-drop
